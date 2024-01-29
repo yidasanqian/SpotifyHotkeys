@@ -23,3 +23,19 @@
         send "{Media_Next}"         ;播放下一曲目
     }
 }  
+
+^!Up::                         ; Ctrl+Shift+上键
+{
+    if ProcessExist("Spotify.exe")  ;如果Spotify在运行
+    {
+        send "{Volume_Up}"         ;增加音量
+    }
+}  
+
+^!Down::                         ; Ctrl+Shift+下键
+{
+    if ProcessExist("Spotify.exe")  ;如果Spotify在运行
+    {
+        send "{Volume_Down}"         ;减少音量
+    }
+} 
